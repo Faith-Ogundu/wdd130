@@ -22,7 +22,11 @@ img {
 }
 
 p {
-    padding: 10px;
+    padding: 0;
+}
+
+span {
+    padding: 0;
 }
 
 aside {
