@@ -15,6 +15,9 @@ h1 {
 img{
     width: 200px;
     height: auto;
+    margin: 1rem;
+    border:1 px solid #000;
+    padding: 1rem;
 }
 
 main {
