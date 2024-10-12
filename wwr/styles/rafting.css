@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #36393b;   
+    --secondary-color: #e5B181;
+    --background-color: #8ee3ef; 
+    --text-color: #bf3100;       
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color); /* Added semicolon */
+    color: var(--text-color); /* Added semicolon */
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px; /* Adjust logo size */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--secondary-color); /* Added semicolon */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center nav items */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    text-align: center;
+
+}
+
+.hero img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+    color:white
+}
+
+.hero article {
+    position: absolute; /* Position absolutely */
+    bottom: 10%; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the article */
+    background-color: rgba(12, 12, 12, 0.8); /* Dark background with opacity for readability */
+    padding: 15px; /* Add padding for spacing */
+    width: 100%; /* Set width */
+    height: 100px; /* Set height */
+    border-radius: 0; /* Sharp corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+
+.hero article p {
+    margin: 0; /* Remove default margin */
+}
+
+.hero article img {
+    float: right; /* Float image to the right of the paragraph */
+    width: 20%; /* Adjust size of the floated image */
+    margin-left: 15px; /* Space between text and image */
+    border-radius: 4px; /* Optional: rounded corners for images */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: var(--primary-color); /* Changed to use variable */
+    color: white;
+    padding: 10px;
+    margin-top: 20px; /* Space above footer */
+}
+
+/* Social Links Styles */
+.sociallinks {
+    display: flex;
+    justify-content: center; /* Center social icons */
+}
+
+.sociallinks a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+.sociallinks a img {
+    display: inline; /* Ensure images are displayed inline */
+}
+
+    .hero h1 {
+        font-size: 2em; /* Adjust font size for small screens */
+    }
