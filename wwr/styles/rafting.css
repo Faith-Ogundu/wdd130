@@ -37,19 +37,18 @@ nav ul {
     justify-content: center; /* Center nav items */
 }
 
-nav ul li {
-    margin: 0 15px;
-}
 
-nav ul li a {
+nav a {
     color: white; /* Link color */
     text-decoration: none; /* No underline */
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav a:hover {
     text-decoration: underline; /* Underline on hover */
 }
+
+
 
 /* Hero Section Styles */
 .hero {
@@ -63,23 +62,28 @@ nav ul li a:hover {
     height: auto; /* Maintain aspect ratio */
     display: block;
 }
-
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 3em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-    color:white
+.hero article {
+    position: top;
+    top: 100px;
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: add text shadow for better visibility */
+    top: 2rem;
+    padding: 10px; /* Add padding inside the border */
+    border-radius: 5px; /* Optional: rounded corners for the border */
+    background-color: rgba(0, 0, 0, 0.1); /* Optional: semi-transparent background for contrast */
+    margin: 20px 0; /* Add vertical margin */
 }
 
-.hero article {
+
+.hero h1{
     position: absolute; /* Position absolutely */
+    top: 2rem;
     bottom: 10%; /* Adjust as needed */
     left: 50%; /* Center horizontally */
+    font-weight: bold; 
+    font-size: 3em; 
     transform: translateX(-50%); /* Center the article */
-    background-color: rgba(12, 12, 12, 0.8); /* Dark background with opacity for readability */
+    background-color: rgba(0, 0 , 0, 0.5); /* Dark background with opacity for readability */
     padding: 15px; /* Add padding for spacing */
     width: 100%; /* Set width */
     height: 100px; /* Set height */
