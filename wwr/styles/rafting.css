@@ -13,18 +13,22 @@ body {
     color: var(--text-color);
 }
 
+/* Header Styles using CSS Grid */
 header {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: 150px 1fr; /* Logo and nav layout */
+    align-items: center; /* Align items vertically */
     background-color: var(--primary-color);
     color: var(--text-color);
-    text-align: center;
     padding: 20px;
 }
 
+/* Logo */
 .logo {
     width: 150px;
 }
 
-/* Navigation Styles */
+/* Navigation Styles using CSS Flex */
 nav {
     background-color: var(--secondary-color);
     padding: 10px 0;
@@ -33,7 +37,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
+    display: flex; /* Use Flexbox for horizontal layout */
     justify-content: center;
 }
 
@@ -41,6 +45,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0 15px; /* Add horizontal padding for links */
 }
 
 nav a:hover {
@@ -57,7 +62,6 @@ nav a:hover {
     width: 100%;
     height: auto;
     display: block;
-    font-weight: bold; /* Make the hero image bold */
 }
 
 .hero h1 {
@@ -87,12 +91,39 @@ main {
     padding: 20px;
 }
 
-section {
+/* History Section Styles */
+.history {
     margin-bottom: 30px;
     padding: 15px;
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adventures Section Styles */
+.adventures {
+    display: grid; /* Use Grid for the images */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive image layout */
+    gap: 15px; /* Space between images */
+}
+
+.adventures figure {
+    margin: 0; /* Remove default margin */
+    border-radius: 8px;
+    overflow: hidden; /* Clip the image corners */
+}
+
+.adventures img {
+    width: 100%; /* Ensure images fill the figure */
+    height: auto;
+    display: block;
+}
+
+.adventures figcaption {
+    text-align: center; /* Center the caption */
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px;
 }
 
 /* Footer Styles */
@@ -104,23 +135,45 @@ footer {
     margin-top: 20px;
 }
 
-/* Social Links Styles */
-.sociallinks {
+footer .sociallinks {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Align social links to the right */
+    gap: 10px; /* Space between icons */
 }
 
 .sociallinks a {
-    margin: 0 10px;
     text-decoration: none;
 }
 
 .sociallinks a img {
     display: inline;
+    width: 30px; /* Adjust social icon size */
 }
 
+/* Responsive Design Adjustments */
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 2em; /* Adjust font size for small screens */
+    }
+    nav a {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .adventures {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller images on small screens */
+    }
+
+    section h2 {
+        font-size: 1.5em; /* Adjust heading size on smaller screens */
+    }
+
+    section p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    button {
+        padding: 8px 15px; /* Reduce button size */
     }
 }
