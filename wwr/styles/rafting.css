@@ -48,8 +48,10 @@ nav a {
     padding: 0 15px; /* Add horizontal padding for links */
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
+    outline: 2px solid white; /* Focus outline for accessibility */
 }
 
 /* Hero Section Styles */
@@ -69,10 +71,10 @@ nav a:hover {
     top: 20%;
     left: 50%;
     font-weight: bold; 
-    font-size: 3em; 
+    font-size: 3rem; /* Use rem units */
     transform: translateX(-50%);
-    background-color: rgba(0, 0 , 0, 0.5);
-    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem; /* Use rem units */
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -80,7 +82,7 @@ nav a:hover {
 .hero article {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-top: 10px; /* Adjusted to position directly under the image */
+    margin-top: 1rem; /* Adjusted to position directly under the image */
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -135,25 +137,41 @@ footer {
     margin-top: 20px;
 }
 
-footer .sociallinks {
+footer .social-links {
     display: flex;
     justify-content: flex-end; /* Align social links to the right */
     gap: 10px; /* Space between icons */
 }
 
-.sociallinks a {
+.social-links a {
     text-decoration: none;
 }
 
-.sociallinks a img {
+.social-links a img {
     display: inline;
     width: 30px; /* Adjust social icon size */
+}
+
+/* Button Styles */
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px; /* Adjust button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: darkorange; /* Change color on hover */
+    outline: none; /* Remove outline on button focus */
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 600px) {
     .hero h1 {
-        font-size: 2em; /* Adjust font size for small screens */
+        font-size: 2rem; /* Adjust font size for small screens */
     }
     nav a {
         padding: 0 10px; /* Reduce padding on smaller screens */
@@ -166,11 +184,11 @@ footer .sociallinks {
     }
 
     section h2 {
-        font-size: 1.5em; /* Adjust heading size on smaller screens */
+        font-size: 1.5rem; /* Adjust heading size on smaller screens */
     }
 
     section p {
-        font-size: 1em; /* Adjust paragraph size */
+        font-size: 1rem; /* Adjust paragraph size */
     }
 
     button {
