@@ -15,12 +15,13 @@ body {
 
 /* Header Styles using CSS Grid */
 header {
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: 150px 1fr; /* Logo and nav layout */
+    display: flex; /* Use Flexbox for better alignment */
+    justify-content: space-between; /* Space between logo and nav */
     align-items: center; /* Align items vertically */
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 20px;
+    background-color: var(--primary-color); /* Set background color */
+    color: var(--text-color); /* Set text color */
+    padding: 15px 20px; /* Adjust padding for top/bottom and left/right */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
 /* Logo */
