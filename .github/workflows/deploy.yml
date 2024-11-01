@@ -23,6 +23,7 @@ jobs:
           cache: bundler
 
       - name: Install dependencies
+      working-directory: ./docs
         run: |
           gem install bundler
           bundle install
@@ -31,7 +32,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs
-          destination: ./docs/_site
-          future: false
+          destination: ./docs/
+          future: true
           verbose: true
           token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token
