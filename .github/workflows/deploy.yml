@@ -19,16 +19,19 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7  # Use the Ruby version you need
+          ruby-version: '3.0'
+          cache: bundler
 
       - name: Install dependencies
         run: |
           gem install bundler
           bundle install
 
-      - name: Build the site
-        run: bundle exec jekyll build
-
-      - name: Deploy
-        run: |
-          # Add your deployment command here, e.g., deploying to GitHub Pages
+      - name: Build the site with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./docs/_site
+          future: false
+          verbose: true
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token
