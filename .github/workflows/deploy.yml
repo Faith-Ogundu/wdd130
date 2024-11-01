@@ -32,7 +32,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs
-          destination: ./docs/_site
+          destination: ./docs/
           future: true
           verbose: true
           token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token
