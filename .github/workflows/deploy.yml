@@ -1,12 +1,12 @@
-name: Deploy
+name: Build and Deploy
 
 on:
   push:
     branches:
-      - main  # Runs the workflow on pushes to the main branch
+      - main
 
 permissions:
-  contents: write  # Grants write access to the workflow
+  contents: write
 
 jobs:
   build:
@@ -16,5 +16,19 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      # Add any additional steps you need below
-      # For example, a build or deployment step
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7  # Use the Ruby version you need
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build the site
+        run: bundle exec jekyll build
+
+      - name: Deploy
+        run: |
+          # Add your deployment command here, e.g., deploying to GitHub Pages
