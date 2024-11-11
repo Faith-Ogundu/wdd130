@@ -20,10 +20,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
-          cache: bundler
+        
 
       - name: Install dependencies
-      working-directory: ./docs
+        working-directory: ./docs
         run: |
           gem install bundler
           bundle install
